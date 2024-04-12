@@ -5,7 +5,7 @@ import * as eva from '@eva-design/eva';
 import {ApplicationProvider} from '@ui-kitten/components';
 
 // screens
-import HomeScreen from './src/screens/home-screen';
+import RootNavigator from './src/router/root-navigator';
 
 function App() {
   const Stack = createNativeStackNavigator();
@@ -13,9 +13,7 @@ function App() {
   return (
     <ApplicationProvider {...eva} theme={eva.light}>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-        </Stack.Navigator>
+        <RootNavigator />
       </NavigationContainer>
     </ApplicationProvider>
   );
